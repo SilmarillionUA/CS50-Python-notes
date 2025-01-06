@@ -1,588 +1,731 @@
-                <main class="col-lg"> 
-
-                    <h1 class="no_toc" id="lecture-0">Лекція 0</h1> 
-
-<ul id="markdown-toc"> 
-  <li><a href="# create-code-with-python" id="markdown-toc-creating-code-with-python">Створення коду за допомогою Python</a></li> 
-  <li><a href="#functions" id="markdown-toc-functions">Функції</a></li> 
-  <li><a href="#bugs" id="markdown-toc-bugs">Помилки</a></li> 
-  < li><a href="#improving-your-first-python-program" id="markdown-toc-improving-your-first-python-program">Покращення вашого першого Python Програма</a> <ul> 
-      <li><a href="#variables" id="markdown-toc-variables">Змінні</a></li> 
-      <li><a href="#comments" id ="markdown-toc-comments">Коментарі</a></li> 
-      <li><a href="#pseudocode" id="markdown-toc-pseudocode">Псевдокод</a></li> 
-    </ ul> 
-  </li> 
-  <li><a href="#further-improving-your-first-python-program" id="markdown-toc-further-improving-your-first-python-program">Подальше вдосконалення вашого першого Python Програма</a></li> 
-  <li><a href="#strings-and-paremeters" id="markdown-toc-strings-and-paremeters">Рядки та Параметри</a> <ul> 
-      <li><a href="#a-small-problem-with-quotation-marks" id="markdown-toc-a-small-problem-with-quotation-marks">A невелика проблема з лапками</a></li> 
-    </ul> 
-  </li> 
-  <li><a href="#formatting-strings" id="markdown-toc-formatting-strings">Форматування рядків</a></li> 
-  <li><a href="#more-on-strings" id="markdown-toc-more-on-strings" >Докладніше про рядки</a></li> 
-  <li><a href="#integers-or-int" id="markdown-toc-integers-or-int">Цілі числа або int</a></li> 
-  <li><a href="#readability-wins" id="markdown-toc-readability-wins">Читабельність перемагає</a></li> 
-  <li><a href ="#float-basics" id="markdown-toc-float-basics">Основи Float</a></li> 
-  <li><a href="#more-on-floats" id="markdown-toc-more-on-floats">Докладніше про Floats</a></li> 
-  <li><a href="#def" id="markdown-toc-def">Def</a ></li>
-  <li><a href="#returning-values" id="markdown-toc-returning-values">Значення, що повертаються</a></li> 
-  <li data-marker="*">У текстовому редакторі вище ви можете вводити <code class="language-plaintext highlighter-rouge">print("привіт, світ")</code>. Це відома канонічна програма, яку пишуть майже всі кодери під час навчання.</li>
-  <li data-marker="*">VS Code — це спеціальний тип текстового редактора, який називається компілятором. Угорі ви помітите текстовий редактор, а внизу — термінал, де можна виконувати команди.</li>
-<ul>
-<h2 id="creating-code-with-python">Створення коду за допомогою Python</h2>
-</ul>
-  <li><a href="#summing-up" id= "markdown-toc-summing-up">Підведення підсумків</a></li>
-
-  <li data-marker="*">У терміналі ви можете виконувати <code class="language-plaintext highlighter-rouge">кодуйте hello.py</code>, щоб розпочати кодування.</li>
-  <li data-marker="*">У вікні терміналу можна виконувати команди. Щоб запустити цю програму, вам потрібно буде перемістити курсор у нижню частину екрана, клацнувши у вікні терміналу. Тепер ви можете ввести другу команду у вікні терміналу. Біля знака долара введіть <code class="language-plaintext highlighter-rouge">python hello.py</code> та натисніть клавішу enter на клавіатурі.</li> 
-  <li data-marker="*" >Нагадаймо, комп’ютери насправді розуміють лише нулі та одиниці. Таким чином, коли ви запускаєте <code class="language-plaintext highlighter-rouge">python hello.py</code>, python інтерпретуватиме текст, створений вами в <code class="language-plaintext highlighter-rouge">hello .py</code> і перекладіть його на нулі та одиниці, які комп’ютер може зрозуміти.</li> 
-  <li data-marker="*">Результат виконання <code class="language-plaintext highlighter-rouge">python hello.py</code> — програма <code class="language-plaintext highlighter-rouge">привіт, світе</code>.</li> 
-  <li data- marker="*">Вітаємо! Ви щойно створили свою першу програму.</li> 
-</ul> 
-
-<h2 id="functions">Функції</h2> 
-<ul> 
-  <li data-marker="*">Функції — це дієслова або дії, які комп’ютер або мова комп’ютера вже знатиме, як виконувати.</li> 
-  <li data-marker="*">У вашій програмі <code class="language-plaintext highlighter-rouge">hello.py</code> <code class="language-plaintext highlighter-rouge">функція print</code> знає, як друкувати у вікні терміналу.</li> 
-  <li data-marker="*">Функція підсвічування <code class="language-plaintext" Функція -rouge">print</code> приймає аргументи. У цьому випадку <code class="language-plaintext highlighter-rouge">"hello, world"</code> є аргументами функції <code class="language-plaintext highlighter-rouge">print</code> приймає.</li> 
-</ul> 
-
-<h2 id="bugs">Помилки</h2> 
-<ul> 
-  <li data-marker="*">Помилки є природною частиною кодування. Це помилки, проблеми, які ви повинні вирішити! Не падайте духом! Це частина процесу, щоб стати чудовим програмістом.</li> 
-    <p>У нашому текстовому редакторі в <code class="language-plaintext highlighter-rouge">hello.py</code> ми можемо додати іншу функцію. <code class="language-plaintext highlighter-rouge">input</code> – це функція, яка приймає підказку як аргумент. Ми можемо змінити наш код, щоб сказати</p></li> 
-  <li data-marker="*">Уявіть, що в нашій програмі <code class="language-plaintext highlighter-rouge">hello.py</code> ви випадково ввели <code class="language-plaintext highlighter -rouge">print("hello, world"</code> зауважте, що ми пропустили остаточний <code class="language-plaintext highlighter-rouge">)</code>, який вимагає компілятор. Якщо я навмисно зроблю цю помилку, компілятор видасть помилку у вікні терміналу!</li>
-  <li data-marker="*">Часто повідомлення про помилки інформуватимуть вас про вашу помилку та дають підказки, як їх виправити. Однак багато разів компілятор не буде таким.</li> 
-</ul> 
-
-<h2 id="improving-your-first-python-program">Покращення вашої першої програми на Python</h2> 
-<ul > 
-  <li data-marker="*">Ми можемо персоналізувати вашу першу програму Python.</li> 
-  <li data-marker="*"> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">input</span><span class="p">(</span> <span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p ">(</span><span class="s">"привіт, світ"</span><span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Однак лише ця редакція не дозволить ваша програма виводить те, що вводить ваш користувач. Для цього нам потрібно буде познайомити вас зі змінними</li> 
-</ul> 
-
-<h3 id="variables">Змінні</h3> 
-<ul> 
-  <li data-marker="*">Змінна – це просто контейнер для значення у вашій власній програмі.</li> 
-  <li data-marker="*"> 
-    <p>У вашій програмі ви можете ввести власну змінну, відредагувавши її для читання</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o" >=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span> <span class="p">)</span> 
+<main class="col-lg">
+  <h1 class="no_toc" id="lecture-0">Лекція 0</h1>
+  <ul id="markdown-toc">
+    <li>
+      <a href="#%20create-code-with-python" id="markdown-toc-creating-code-with-python">Створення коду за допомогою Python</a>
+    </li>
+    <li>
+      <a href="#functions" id="markdown-toc-functions">Функції</a>
+    </li>
+    <li>
+      <a href="#bugs" id="markdown-toc-bugs">Помилки</a>
+    </li>&lt; li&gt;<a href="#improving-your-first-python-program" id="markdown-toc-improving-your-first-python-program">Покращення вашого першого Python Програма</a>
+    <ul>
+      <li>
+        <a href="#variables" id="markdown-toc-variables">Змінні</a>
+      </li>
+      <li>
+        <a href="#comments" id="markdown-toc-comments">Коментарі</a>
+      </li>
+      <li>
+        <a href="#pseudocode" id="markdown-toc-pseudocode">Псевдокод</a>
+      </li>&lt;/ ul&gt;
+      <li>
+        <a href="#further-improving-your-first-python-program" id="markdown-toc-further-improving-your-first-python-program">Подальше вдосконалення вашого першого Python Програма</a>
+      </li>
+      <li>
+        <a href="#strings-and-paremeters" id="markdown-toc-strings-and-paremeters">Рядки та Параметри</a>
+        <ul>
+          <li>
+            <a href="#a-small-problem-with-quotation-marks" id="markdown-toc-a-small-problem-with-quotation-marks">A невелика проблема з лапками</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#formatting-strings" id="markdown-toc-formatting-strings">Форматування рядків</a>
+      </li>
+      <li>
+        <a href="#more-on-strings" id="markdown-toc-more-on-strings">Докладніше про рядки</a>
+      </li>
+      <li>
+        <a href="#integers-or-int" id="markdown-toc-integers-or-int">Цілі числа або int</a>
+      </li>
+      <li>
+        <a href="#readability-wins" id="markdown-toc-readability-wins">Читабельність перемагає</a>
+      </li>
+      <li>
+        <a href="#float-basics" id="markdown-toc-float-basics">Основи Float</a>
+      </li>
+      <li>
+        <a href="#more-on-floats" id="markdown-toc-more-on-floats">Докладніше про Floats</a>
+      </li>
+      <li>
+        <a href="#def" id="markdown-toc-def">Def</a>
+      </li>
+      <li>
+        <a href="#returning-values" id="markdown-toc-returning-values">Значення, що повертаються</a>
+      </li>
+      <li data-marker="*">У текстовому редакторі вище ви можете вводити <code class="language-plaintext highlighter-rouge">print("привіт, світ")</code>. Це відома канонічна програма, яку пишуть майже всі кодери під час навчання.</li>
+      <li data-marker="*">VS Code — це спеціальний тип текстового редактора, який називається компілятором. Угорі ви помітите текстовий редактор, а внизу — термінал, де можна виконувати команди.</li>
+      <ul>
+        <h2 id="creating-code-with-python">Створення коду за допомогою Python</h2>
+      </ul>
+      <li>
+        <a href="#summing-up" id="markdown-toc-summing-up">Підведення підсумків</a>
+      </li>
+      <li data-marker="*">У терміналі ви можете виконувати <code class="language-plaintext highlighter-rouge">кодуйте hello.py</code>, щоб розпочати кодування.</li>
+      <li data-marker="*">У вікні терміналу можна виконувати команди. Щоб запустити цю програму, вам потрібно буде перемістити курсор у нижню частину екрана, клацнувши у вікні терміналу. Тепер ви можете ввести другу команду у вікні терміналу. Біля знака долара введіть <code class="language-plaintext highlighter-rouge">python hello.py</code> та натисніть клавішу enter на клавіатурі.</li>
+      <li data-marker="*">Нагадаймо, комп’ютери насправді розуміють лише нулі та одиниці. Таким чином, коли ви запускаєте <code class="language-plaintext highlighter-rouge">python hello.py</code>, python інтерпретуватиме текст, створений вами в <code class="language-plaintext highlighter-rouge">hello .py</code> і перекладіть його на нулі та одиниці, які комп’ютер може зрозуміти.</li>
+      <li data-marker="*">Результат виконання <code class="language-plaintext highlighter-rouge">python hello.py</code> — програма <code class="language-plaintext highlighter-rouge">привіт, світе</code>.</li>
+      <li data-="" marker="*">Вітаємо! Ви щойно створили свою першу програму.</li>
+    </ul>
+    <h2 id="functions">Функції</h2>
+    <ul>
+      <li data-marker="*">Функції — це дієслова або дії, які комп’ютер або мова комп’ютера вже знатиме, як виконувати.</li>
+      <li data-marker="*">У вашій програмі <code class="language-plaintext highlighter-rouge">hello.py</code> <code class="language-plaintext highlighter-rouge">функція print</code> знає, як друкувати у вікні терміналу.</li>
+      <li data-marker="*">Функція підсвічування <code class="language-plaintext">print</code> приймає аргументи. У цьому випадку <code class="language-plaintext highlighter-rouge">"hello, world"</code> є аргументами функції <code class="language-plaintext highlighter-rouge">print</code> приймає.</li>
+    </ul>
+    <h2 id="bugs">Помилки</h2>
+    <ul>
+      <li data-marker="*">Помилки є природною частиною кодування. Це помилки, проблеми, які ви повинні вирішити! Не падайте духом! Це частина процесу, щоб стати чудовим програмістом.</li>
+      <p>У нашому текстовому редакторі в <code class="language-plaintext highlighter-rouge">hello.py</code> ми можемо додати іншу функцію. <code class="language-plaintext highlighter-rouge">input</code> – це функція, яка приймає підказку як аргумент. Ми можемо змінити наш код, щоб сказати</p>
+      <li data-marker="*">Уявіть, що в нашій програмі <code class="language-plaintext highlighter-rouge">hello.py</code> ви випадково ввели <code class="language-plaintext highlighter -rouge">print("hello, world"</code> зауважте, що ми пропустили остаточний <code class="language-plaintext highlighter-rouge">)</code>, який вимагає компілятор. Якщо я навмисно зроблю цю помилку, компілятор видасть помилку у вікні терміналу!</li>
+      <li data-marker="*">Часто повідомлення про помилки інформуватимуть вас про вашу помилку та дають підказки, як їх виправити. Однак багато разів компілятор не буде таким.</li>
+    </ul>
+    <h2 id="improving-your-first-python-program">Покращення вашої першої програми на Python</h2>
+    <ul>
+      <li data-marker="*">Ми можемо персоналізувати вашу першу програму Python.</li>
+      <li data-marker="*">
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="nf">input</span><span class="p">(</span> <span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="s">"привіт, світ"</span><span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Однак лише ця редакція не дозволить ваша програма виводить те, що вводить ваш користувач. Для цього нам потрібно буде познайомити вас зі змінними</li>
+    </ul>
+    <h3 id="variables">Змінні</h3>
+    <ul>
+      <li data-marker="*">Змінна – це просто контейнер для значення у вашій власній програмі.</li>
+      <li data-marker="*">
+        <p>У вашій програмі ви можете ввести власну змінну, відредагувавши її для читання</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span> <span class="p">)</span> 
 <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт, світ"</span><span class="p">) </span> 
-</code></pre></div> </div> 
-    <p>Зверніть увагу, що цей знак рівності <code class="language-plaintext highlighter-rouge">=</code> посередині <code class="language-plaintext highlighter-rouge">name = input("Як тебе звуть? ")</code> відіграє особливу роль у програмуванні.Цей знак рівності буквально присвоює те, що знаходиться праворуч, тому, що ліворуч. Таким чином, значення, яке повертає <code class="language-plaintext highlighter-rouge">input("What's your name? ")</code>, присвоюється <code class="language-plaintext highlighter-rouge">name< /code>.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Якщо ви відредагуєте свій код у такий спосіб, ви помітите помилку</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o" >=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span> <span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+        <p>Зверніть увагу, що цей знак рівності <code class="language-plaintext highlighter-rouge">=</code> посередині <code class="language-plaintext highlighter-rouge">name = input("Як тебе звуть? ")</code> відіграє особливу роль у програмуванні.Цей знак рівності буквально присвоює те, що знаходиться праворуч, тому, що ліворуч. Таким чином, значення, яке повертає <code class="language-plaintext highlighter-rouge">input("What's your name? ")</code>, присвоюється <code class="language-plaintext highlighter-rouge">name&lt; /code&gt;.</code></p>
+      </li>
+      <li data-marker="*">
+        <p><code class="language-plaintext highlighter-rouge">Якщо ви відредагуєте свій код у такий спосіб, ви помітите помилку</code></p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code class="language-plaintext highlighter-rouge"><code><span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span> <span class="p">)</span> 
 <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт, ім'я"</span><span class="p">) </span>
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Програма поверне <code class="language-plaintext highlighter-rouge">hello, name </code> у вікні терміналу незалежно від того, що вводить користувач.</li> 
-  <li data-marker="*"> 
-  <li data-marker="*"> 
-    <p>Під час подальшого редагування нашого коду ви можете вводити</p>
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ім'я</span> <span class=" o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</ span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">)< /span> 
+</code></code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Програма поверне <code class="language-plaintext highlighter-rouge">hello, name</code> у вікні терміналу незалежно від того, що вводить користувач.</li>
+      <li data-marker="*">
+        <p>Під час подальшого редагування нашого коду ви можете вводити</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "&lt;/ span&gt;<span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">)&lt; /span&gt; 
 <span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p"> )</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Результат у вікні терміналу буде таким:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class ="n">Як</span><span class="s">тебе звати? Девіде, 
+</span></span></code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Результат у вікні терміналу буде таким:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">Як</span><span class="s">тебе звати? Девіде, 
 привіт, 
 Девіде 
-</span></code></pre></div> </div> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Ми наближаємось до очікуваного результату !</p> 
-  </li> 
-  <li data-marker="*">Ви можете дізнатися більше в документації Python на <a href="https://docs.python.org/3/library/datatypes.html">типи даних</a>.</li> 
-</ul> 
-
-<h3 id="comments">Коментарі</h3> 
-<ul> 
-  <li data-marker="*">Коментарі — це спосіб для програмістів відстежувати, що вони роблять у своїх програмах, і навіть інформувати інших про їхні наміри щодо блоку коду. Коротше кажучи, це примітки для вас та інших, які побачать ваш код!</li> 
-  <li data-marker="*"> 
-    <p>Ви можете додавати коментарі до своєї програми, щоб бачити, що саме програма виконується. Ви можете редагувати свій код таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
-</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p ">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p">(</span><span class= "s">"привіт,"</span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p">(</span ><span class="n">ім'я</span><span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Коментарі також можуть служити для вас списком справ.</li> 
-</ul> 
-
-<h3 id="pseudocode">Псевдокод</h3 > 
-<ul> 
-    <p>Псевдокод — це важливий тип коментаря, який стає особливим типом списку справ, особливо коли ви не розумієте, як виконати завдання кодування. Наприклад, у своєму коді ви можете відредагувати код так:</p>
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
-</span ><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(< /span><span class="s">"Як тебе звати? "</span><span class="p">)</span> 
+</span></code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Ми наближаємось до очікуваного результату !</p>
+      </li>
+      <li data-marker="*">Ви можете дізнатися більше в документації Python на <a href="https://docs.python.org/3/library/datatypes.html">типи даних</a>.
+      </li>
+    </ul>
+    <h3 id="comments">Коментарі</h3>
+    <ul>
+      <li data-marker="*">Коментарі — це спосіб для програмістів відстежувати, що вони роблять у своїх програмах, і навіть інформувати інших про їхні наміри щодо блоку коду. Коротше кажучи, це примітки для вас та інших, які побачать ваш код!</li>
+      <li data-marker="*">
+        <p>Ви можете додавати коментарі до своєї програми, щоб бачити, що саме програма виконується. Ви можете редагувати свій код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Коментарі також можуть служити для вас списком справ.</li>
+    </ul>
+    <h3 id="pseudocode">Псевдокод</h3>
+    <ul>
+      <p>Псевдокод — це важливий тип коментаря, який стає особливим типом списку справ, особливо коли ви не розумієте, як виконати завдання кодування. Наприклад, у своєму коді ви можете відредагувати код так:</p>
+      <div class="language-py highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(&lt; /span&gt;<span class="s">"Як тебе звати? "</span><span class="p">)</span> 
 
 <span class="c1"># Друк привіт 
-</span><span class="nf">друк</span><span class= "p">(</span><span class="s">"hello,"</span><span class="p">)</span> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="s">"hello,"</span><span class="p">)</span> 
 
 <span class="c1"># Надрукувати назву введено 
-</span><span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</span> </code> 
-</pre></div> </div> 
-  </li> 
-</ul> 
-
-<h2 id="further-improving-your-first-python-program">Подальше вдосконалення вашої першої програми на Python</h2> 
-<ul> 
-  <li data-marker="*"> 
-    <p>Ми можемо додатково редагувати наш код наступним чином :</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
-</span ><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(< /span><span class="s">"Як тебе звати? "</span><span class="p">)</span> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</span> </span> 
+</code></pre>
+        </div>
+      </div>
+    </ul>
+    <h2 id="further-improving-your-first-python-program">Подальше вдосконалення вашої першої програми на Python</h2>
+    <ul>
+      <li data-marker="*">
+        <p>Ми можемо додатково редагувати наш код наступним чином :</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(&lt; /span&gt;<span class="s">"Як тебе звати? "</span><span class="p">)</span> 
 
 <span class="c1"># Надрукувати привіт і введене ім’я 
 </span><span class="nf">надрукувати</span> <span class="p">(</span><span class="s">"привіт, "</span> <span class="o">+</span> <span class="n"> ім’я</span><span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Виявилося, що деякі функції приймають багато аргументів.</li> 
-  <li data-marker="*"> 
-    <p>Ми можемо використовувати кому <code class="language-plaintext highlighter-rouge">,</code> щоб передати кілька аргументів, відредагувавши наш код таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
-</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p ">(</span><span class="s">"Що у вас ім'я? "</span><span class="p">)</span> 
+</span></code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Виявилося, що деякі функції приймають багато аргументів.</li>
+      <li data-marker="*">
+        <p>Ми можемо використовувати кому <code class="language-plaintext highlighter-rouge">,</code> щоб передати кілька аргументів, відредагувавши наш код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Що у вас ім'я? "</span><span class="p">)</span> 
 
 <span class="c1"># Надрукувати привіт і введене ім'я 
-</span><span class="nf">надрукувати</ span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n ">name</span><span class="p">)</span>  
-</code></pre></div> </div>
-    <p>Вивід у терміналі, якщо ми ввели «Девід» ми будемо <code class="language-plaintext highlighter-rouge">привіт, Девід</code>. Успіху.</p> 
-  </li> 
-</ul> 
-
-<h2 id="strings-and-paremeters">Рядки та параметри</h2> 
-<ul>
-  <li data-marker="*">Рядок, відомий як <code class="language-plaintext highlighter-rouge">str</code> у Python, є послідовністю тексту.</li> 
-  <li data -marker="*"> 
-    <p>Повернувшись трохи назад до наступного коду, ми побачили візуальний побічний ефект, коли результат з’являвся у кількох рядках:</p> 
-
-    <div class="language-py" highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
-</span><span class="n" >назва</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class=" s">"Як тебе звати? "</span><span class="p">)</span> 
+</span><span class="nf">надрукувати&lt;/ span&gt;<span class="p">(</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>  
+</span></code></pre>
+          </div>
+        </div>
+        <p>Вивід у терміналі, якщо ми ввели «Девід» ми будемо <code class="language-plaintext highlighter-rouge">привіт, Девід</code>. Успіху.</p>
+      </li>
+    </ul>
+    <h2 id="strings-and-paremeters">Рядки та параметри</h2>
+    <ul>
+      <li data-marker="*">Рядок, відомий як <code class="language-plaintext highlighter-rouge">str</code> у Python, є послідовністю тексту.</li>
+      <li data="">
+        <p>Повернувшись трохи назад до наступного коду, ми побачили візуальний побічний ефект, коли результат з’являвся у кількох рядках:</p>
+        <div class="language-py">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитайте в користувача його ім’я 
+</span><span class="n">назва</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Як тебе звати? "</span><span class="p">)</span> 
 <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p"> )</span> 
-<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p ">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Функції приймають аргументи, які впливають на їх поведінку. Якщо ми подивимося на документацію для <a href="https://docs.python.org/3/library/functions.html#print"><code class="language-plaintext highlighter-rouge">print</code ></a> ви помітите, що ми можемо багато дізнатися про аргументи, які приймає функція print.</li> 
-  <li data-marker="*">Переглядаючи цю документацію, ви дізнаєтеся, що функція print автоматично включити частину код <code class="language-plaintext highlighter-rouge">end='\n'. Це </code>\n<code class="language-plaintext highlighter-rouge"> вказує, що функція друку автоматично створить розрив рядка під час виконання. Функція друку приймає аргумент під назвою </code>end` і за умовчанням створює новий рядок.</li> 
-  <li data-marker="*">Однак технічно ми можемо надати аргумент для <code class= "language-plaintext highlighter-rouge">закінчити</code> так, щоб новий рядок не створювався!</li> 
-  <li data-marker="*"> 
-    <p>Ми можемо змінити наш код таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
-</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p ">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p">(</span><span class= "s">"привіт,"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span ><span class="s">""</span><span class="p">)</span>  
-<span class="nf">друк</span><span class="p">(</span ><span class="n">ім'я</span><span class="p">)</span>
-</code></pre></div> </div>
-    <p>Надаючи <code class="language-plaintext highlighter-rouge">end=""</code>, ми перезаписуємо значення за замовчуванням <code class="language-plaintext highlighter-rouge">end< /code> таким чином, щоб він ніколи не створював новий рядок після цього першого оператора друку. Якщо вказати ім’я «David», у вікні терміналу буде виведено <code class="language-plaintext highlighter-rouge">привіт, Девід</code>.</p> 
-  </li> 
-  <li data-marker ="*"> 
-    <p>Отже, параметри — це аргументи, які може приймати функція.</p> 
-  </li> 
-  <li data-marker="*">Ви можете дізнатися більше в документації Python на <a href="https://docs.python.org/3/library/functions.html#print"><code class="language-plaintext highlighter-rouge">друк</code></a>.</li > 
-</ul> 
-
-<h3 id="a-small-problem-with-quotation-marks">Невелика проблема з лапками</h3> 
-<ul> 
-  <li data-marker="*">Зверніть увагу, як додавання лапки як частина вашого рядка складно.</li> 
-  <li data-marker="*"><code class="language-plaintext highlighter-rouge">print("hello,"friend"")</code > не працюватиме, і компілятор видасть помилку.</li> 
-  <li data-marker="*">Загалом існує два підходи до виправлення цього. По-перше, ви можете просто змінити лапки на одинарні лапки.</li> 
-  <li data-marker="*">Іншим, більш поширеним підходом може бути код у вигляді <code class="language-plaintext highlighter-rouge"> print("привіт, \"друже\"")</code>. Зворотні косі риски повідомляють компілятору, що наступний символ слід вважати лапками в рядку та уникнути помилки компілятора.</li> 
-</ul> 
-
-<h2 id="formatting-strings">Форматування рядків</h2> 
-<ul > 
-  <li data-marker="*"> 
-    <p>Мабуть, найелегантнішим способом використання рядків буде такий:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
-</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p ">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
-<span class="nf">друк</span><span class="p">(</span><span class= "sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">name</span> <span class="si">}</span><span class="s">"</span><span class="p">)</span> 
-</code></pre></div> </div>
-    <p>Зверніть увагу на <code class="language-plaintext highlighter-rouge">f</code> у <code class="language-plaintext highlighter-rouge">print(f"привіт, {name}")</ код>. Цей <code class="language-plaintext highlighter-rouge">f</code> є спеціальним індикатором для Python, який обробляє цей рядок особливим чином, відмінним від попередніх підходів, які ми проілюстрували в цій лекції. Очікуйте, що ви досить часто використовуватимете цей стиль рядків у цьому курсі.</p> 
-  </li> 
-</ul> 
-
-<h2 id="more-on-strings">Докладніше про рядки</h2> 
-<ul> 
-  <li data-marker="*">Ніколи не очікуйте, що ваш користувач співпрацюватиме за призначенням. Тому вам потрібно переконатися, що введені користувачем дані виправлені або перевірені.</li> 
-  <li data-marker="*">Виявилося, що в рядки вбудована можливість видаляти пробіли з рядка.< /li> 
-  <li data-marker="*"> 
-    <p>Використовуючи метод <code class="language-plaintext highlighter-rouge">strip</code> на <code class="language-plaintext highlighter-rouge">name</code> як <code class="language-plaintext highlighter-rouge">name = name.strip()</code>, це видалить усі пробіли ліворуч і праворуч від користувачів введення. Ви можете змінити свій код таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1 "># Запитуйте в користувача ім’я 
-</span><span class="n">ім’я</span> <span class="o">=</span> <span class="nf">введення</ span><span class="p">(</span><span class="s">"Як вас звати? "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Функції приймають аргументи, які впливають на їх поведінку. Якщо ми подивимося на документацію для <a href="https://docs.python.org/3/library/functions.html#print"><code class="language-plaintext highlighter-rouge">print</code></a> ви помітите, що ми можемо багато дізнатися про аргументи, які приймає функція print.
+      </li>
+      <li data-marker="*">Переглядаючи цю документацію, ви дізнаєтеся, що функція print автоматично включити частину код <code class="language-plaintext highlighter-rouge">end='\n'. Це</code> \n <code class="language-plaintext highlighter-rouge">вказує, що функція друку автоматично створить розрив рядка під час виконання. Функція друку приймає аргумент під назвою</code> end` і за умовчанням створює новий рядок.</li>
+      <li data-marker="*">Однак технічно ми можемо надати аргумент для <code class="language-plaintext highlighter-rouge">закінчити</code> так, щоб новий рядок не створювався!</li>
+      <li data-marker="*">
+        <p>Ми можемо змінити наш код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>  
+<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</span>
+</code></pre>
+          </div>
+        </div>
+        <p>Надаючи <code class="language-plaintext highlighter-rouge">end=""</code>, ми перезаписуємо значення за замовчуванням <code class="language-plaintext highlighter-rouge">end&lt; /code&gt; таким чином, щоб він ніколи не створював новий рядок після цього першого оператора друку. Якщо вказати ім’я «David», у вікні терміналу буде виведено <code class="language-plaintext highlighter-rouge">привіт, Девід</code>.</code></p>
+      </li>
+      <li data-marker="*">
+        <p>Отже, параметри — це аргументи, які може приймати функція.</p>
+      </li>
+      <li data-marker="*">Ви можете дізнатися більше в документації Python на <a href="https://docs.python.org/3/library/functions.html#print"><code class="language-plaintext highlighter-rouge">друк</code></a>.
+      </li>
+    </ul>
+    <h3 id="a-small-problem-with-quotation-marks">Невелика проблема з лапками</h3>
+    <ul>
+      <li data-marker="*">Зверніть увагу, як додавання лапки як частина вашого рядка складно.</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">print("hello,"friend"")</code> не працюватиме, і компілятор видасть помилку.</li>
+      <li data-marker="*">Загалом існує два підходи до виправлення цього. По-перше, ви можете просто змінити лапки на одинарні лапки.</li>
+      <li data-marker="*">Іншим, більш поширеним підходом може бути код у вигляді <code class="language-plaintext highlighter-rouge">print("привіт, \"друже\"")</code>. Зворотні косі риски повідомляють компілятору, що наступний символ слід вважати лапками в рядку та уникнути помилки компілятора.</li>
+    </ul>
+    <h2 id="formatting-strings">Форматування рядків</h2>
+    <ul>
+      <li data-marker="*">
+        <p>Мабуть, найелегантнішим способом використання рядків буде такий:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитуйте в користувача їхні ім'я 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Що у вас ім'я "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">name</span> <span class="si">}</span><span class="s">"</span><span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+        <p>Зверніть увагу на <code class="language-plaintext highlighter-rouge">f</code> у <code class="language-plaintext highlighter-rouge">print(f"привіт, {name}")&lt;/ код&gt;. Цей <code class="language-plaintext highlighter-rouge">f</code> є спеціальним індикатором для Python, який обробляє цей рядок особливим чином, відмінним від попередніх підходів, які ми проілюстрували в цій лекції. Очікуйте, що ви досить часто використовуватимете цей стиль рядків у цьому курсі.</code></p>
+      </li>
+    </ul>
+    <h2 id="more-on-strings">Докладніше про рядки</h2>
+    <ul>
+      <li data-marker="*">Ніколи не очікуйте, що ваш користувач співпрацюватиме за призначенням. Тому вам потрібно переконатися, що введені користувачем дані виправлені або перевірені.</li>
+      <li data-marker="*">Виявилося, що в рядки вбудована можливість видаляти пробіли з рядка.&lt; /li&gt;</li>
+      <li data-marker="*">
+        <p>Використовуючи метод <code class="language-plaintext highlighter-rouge">strip</code> на <code class="language-plaintext highlighter-rouge">name</code> як <code class="language-plaintext highlighter-rouge">name = name.strip()</code>, це видалить усі пробіли ліворуч і праворуч від користувачів введення. Ви можете змінити свій код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитуйте в користувача ім’я 
+</span><span class="n">ім’я</span> <span class="o">=</span> <span class="nf">введення&lt;/ span&gt;<span class="p">(</span><span class="s">"Як вас звати? "</span><span class="p">)</span> 
 
 <span class="c1"># Видалити пробіли з str 
-</span><span class ="n">ім'я</span> <span class="o">=</span> <span class="n">ім'я</span><span class="p">.</span>< span class="nf">смуга</span><span class="p">()</span> 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="n">ім'я</span><span class="p">.</span>&lt; span class="nf"&gt;смуга</span><span class="p">()</span> 
 
 <span class="c1"># Надрукувати вихідні дані 
-</span><span class="nf">print</span><span class="p">(</span><span class="sa">f< /span><span class="s">"привіт,</span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s" >"</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Повторний запуск цієї програми, незалежно від того, скільки пробілів ви ввели перед або після назви буде видалено всі пробіли.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Використовуючи метод <code class="language-plaintext highlighter-rouge">title</code>, це буде ім'я користувача в регістрі:</p> 
-
-    <div class=" language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитати в користувача його ім’я 
+</span><span class="nf">print</span><span class="p">(</span><span class="sa">f&lt; /span&gt;<span class="s">"привіт,</span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
+</span></code></pre>
+          </div>
+        </div>
+        <p>Повторний запуск цієї програми, незалежно від того, скільки пробілів ви ввели перед або після назви буде видалено всі пробіли.</p>
+      </li>
+      <li data-marker="*">
+        <p>Використовуючи метод <code class="language-plaintext highlighter-rouge">title</code>, це буде ім'я користувача в регістрі:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитати в користувача його ім’я 
 </span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span> <span class="s">"Як тебе звуть? "</span><span class="p">)</span>
 
 <span class="c1"># Видалити пробіли з рядка 
-</span><span class="n">name</span> <span class="o">=</span> <span class="n" ">name</span><span class="p">.</span><span class="nf">strip</span><span class="p">()</span> 
+</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">.</span><span class="nf">strip</span><span class="p">()</span> 
 
-<span class ="c1"># Зробіть велику першу літеру кожного слова 
-</span><span class="n">name</span> <span class="o">=</span> <span class="n">ім'я</span><span class="p">.</span><span class="nf">назва</span span><span class="p">()</span> 
+<span class="c1"># Зробіть велику першу літеру кожного слова 
+</span><span class="n">name</span> <span class="o">=</span> <span class="n">ім'я</span><span class="p">.</span><span class="nf">назва</span><span class="p">()</span> 
 
 <span class="c1"># Надрукувати результат 
-</span><span class="nf">друк</span><span class=" p">(</span><span class="sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">"</span> <span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">На цей момент ви можете бути дуже втомився вводити <code class="language-plaintext highlighter-rouge">python</code> кілька разів у вікні терміналу. Ви змушуєте нас стрілкою вгору вашої клавіатури викликати останні команди терміналу, які ви зробили.</li> 
-  <li data-marker="*"> 
-    <p>Зверніть увагу, що ви можете змінити свій код, щоб бути ефективнішим:< /p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитати в користувача ім’я 
+</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">"</span> <span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">На цей момент ви можете бути дуже втомився вводити <code class="language-plaintext highlighter-rouge">python</code> кілька разів у вікні терміналу. Ви змушуєте нас стрілкою вгору вашої клавіатури викликати останні команди терміналу, які ви зробили.</li>
+      <li data-marker="*">
+        <p>Зверніть увагу, що ви можете змінити свій код, щоб бути ефективнішим:&lt; /p&gt;</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитати в користувача ім’я 
 </span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span> <span class="s">"Як вас звуть? "</span><span class="p">)</span> 
 
 <span class="c1"># Видаліть пробіли з рядка та зробіть першу літеру великою кожного слова 
 </span><span class="n">name</span> <span class="o">=</span> <span class="n">назва</span><span class="p">.</span><span class="nf">смуга</span> <span class="p">().</span><span class="nf">title</span><span class="p">()</span> 
 
 <span class="c1"># Надрукувати результат 
-</span><span class ="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </span ><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
-</code></pre></div> < /div> 
-    <p>Це створює той самий результат, що й ваш попередній код.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Ми могли б навіть піти далі!</p> 
- 
-    <div class ="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Запитайте в користувача ім'я, видаліть пробіли з str і зробіть першу літеру кожного слова великою
-</span ><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> ).</span><span class="nf">strip</span><span class="p">().</span><span class="nf">title</span><span class ="p">()</span> 
+</span><span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
+</code></pre>
+          </div>&lt; /div&gt;
+          <p>Це створює той самий результат, що й ваш попередній код.</p>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Ми могли б навіть піти далі!</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитайте в користувача ім'я, видаліть пробіли з str і зробіть першу літеру кожного слова великою
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> ).</span><span class="nf">strip</span><span class="p">().</span><span class="nf">title</span><span class="p">()</span> 
 
 <span class="c1"># Надрукувати результат
-</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s" >"привіт, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class ="s">"</span><span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Ви можете дізнатися більше про рядки в документації Python на <a href="https://docs.python.org/3/library/stdtypes.html#str"> <code class="language-plaintext highlighter-rouge">str</code></a></li> 
-</ul> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
+</code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Ви можете дізнатися більше про рядки в документації Python на <a href="https://docs.python.org/3/library/stdtypes.html#str"><code class="language-plaintext highlighter-rouge">str</code></a>
+      </li>
+    </ul>
+    <h2 id="integers-or-int">Цілі числа або int</h2>
+    <ul>
+      <li data-marker="*">У Python ціле число називається <code class="language-plaintext highlighter-rouge">int</code>.</li>
+      <li data-marker="*">У світі математики ми знайомі з операторами +, -, *, / і %. Цей останній оператор <code class="language-plaintext highlighter-rouge">%</code> або оператор модуля може бути вам не дуже знайомий.</li>
+      <li data-marker="*">Ви не потрібно використовувати вікно текстового редактора у вашому компіляторі для запуску коду Python. У своєму терміналі ви можете запускати <code class="language-plaintext highlighter-rouge">python</code> окремо. Вам буде запропоновано <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code> у вікні терміналу. Потім ви можете запустити живий інтерактивний код. Ви можете ввести <code class="language-plaintext highlighter-rouge">1+1</code>, і він запустить обчислення. Цей режим зазвичай не використовуватиметься під час цього курсу.</li>
+      <li data-marker="*">Знову відкриваючи VS Code, ми можемо ввести <code class="language-plaintext highlighter-rouge">калькулятор коду. py</code> в терміналі. Буде створено новий файл, у якому ми створимо наш власний калькулятор.</li>
+      <li data-marker="*">
+        <p>По-перше, ми можемо оголосити декілька змінних.</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">x</span> &lt; span class="o"&gt;=</code> <span class="mi">1</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> 
 
-<h2 id="integers-or-int">Цілі числа або int</h2> 
-<ul> 
-  <li data-marker="*">У Python ціле число називається <code class="language-plaintext highlighter-rouge">int</code>.</li > 
-  <li data-marker="*">У світі математики ми знайомі з операторами +, -, *, / і %. Цей останній оператор <code class="language-plaintext highlighter-rouge">%</code> або оператор модуля може бути вам не дуже знайомий.</li> 
-  <li data-marker="*">Ви не потрібно використовувати вікно текстового редактора у вашому компіляторі для запуску коду Python. У своєму терміналі ви можете запускати <code class="language-plaintext highlighter-rouge">python</code> окремо. Вам буде запропоновано <code class="language-plaintext highlighter-rouge">>>></code> у вікні терміналу. Потім ви можете запустити живий інтерактивний код. Ви можете ввести <code class="language-plaintext highlighter-rouge">1+1</code>, і він запустить обчислення. Цей режим зазвичай не використовуватиметься під час цього курсу.</li> 
-  <li data-marker="*">Знову відкриваючи VS Code, ми можемо ввести <code class="language-plaintext highlighter-rouge">калькулятор коду. py</code> в терміналі. Буде створено новий файл, у якому ми створимо наш власний калькулятор.</li> 
-  <li data-marker="*"> 
-    <p>По-перше, ми можемо оголосити декілька змінних.</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> < span class="o">=</span> <span class="mi">1</span> 
-<span class="n">y</span> <span class="o">=</span > <span class="mi">2</span> 
-
-<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</ span> 
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y&lt;/ span&gt; 
 
 <span class="nf">друк</span><span class="p">(</span><span class="n">z</span><span class="p">) </span> 
-</code></pre></div> </div>
-    <p>Природно, коли ми запускаємо <code class="language-plaintext highlighter-rouge">python calculator.py</code>, ми отримуємо результат у вікні терміналу <code class="language-plaintext highlighter-rouge" >3</code>. Ми можемо зробити це більш інтерактивним за допомогою функції <code class="language-plaintext highlighter-rouge">input</code>.</p> 
-
-    <div class="language-py highlighter-rouge"><div class=" highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="nf">input< /span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">)</span> < 
-span class="n">y </span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s" >"Що таке y?"</span><span class="p">)</span> 
+</span></pre>
+          </div>
+        </div>
+        <p>Природно, коли ми запускаємо <code class="language-plaintext highlighter-rouge">python calculator.py</code>, ми отримуємо результат у вікні терміналу <code class="language-plaintext highlighter-rouge">3</code>. Ми можемо зробити це більш інтерактивним за допомогою функції <code class="language-plaintext highlighter-rouge">input</code>.</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="nf">input&lt; /span&gt;<span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">)</span> &lt; 
+span class="n"&gt;y </span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Що таке y?"</span><span class="p">)</span> 
 
 <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> 
 
-<span class="nf">друк</span><span class="p">(</span><span class="n">z</ span><span class="p">)</span> 
-</code></pre></div> </div> 
-  </li> 
-  <li data-marker="*">Під час запуску цієї програми ми виявляємо, що вихідні дані є неправильними: <code class="language-plaintext highlighter-rouge">12</code>. Чому це може бути?</li> 
-  <li data-marker="*"> 
-    <p>Раніше ми бачили, як знак <code class="language-plaintext highlighter-rouge">+</code> об'єднує два рядки. Оскільки введені дані з клавіатури комп’ютера надходять у компілятор як текст, він розглядається як рядок. Тому нам потрібно перетворити цей вхід із рядка на ціле число. Ми можемо зробити це наступним чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> < span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Скільки х? "</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">z&lt;/ span&gt;<span class="p">)</span> 
+</span></code></pre>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">Під час запуску цієї програми ми виявляємо, що вихідні дані є неправильними: <code class="language-plaintext highlighter-rouge">12</code>. Чому це може бути?</li>
+      <li data-marker="*">
+        <p>Раніше ми бачили, як знак <code class="language-plaintext highlighter-rouge">+</code> об'єднує два рядки. Оскільки введені дані з клавіатури комп’ютера надходять у компілятор як текст, він розглядається як рядок. Тому нам потрібно перетворити цей вхід із рядка на ціле число. Ми можемо зробити це наступним чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">x</span> &lt; span class="o"&gt;=</code> <span class="nf">введення</span><span class="p">(</span><span class="s">"Скільки х? "</span><span class="p">)</span> 
 <span class="n">y</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span> <span class="s">"Що таке y? "</span><span class="p">)</span> 
 
-<span class="n">z</span> <span class="o" >=</span> <span class="nf">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nf">int</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span> 
+<span class="n">z</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nf">int</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span> 
 
-<span class="nf">друк</span span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Тепер результат правильний. Використання <code class="language-plaintext highlighter-rouge">int(x)</code> називається «приведенням», коли значення тимчасово змінюється з одного типу змінної (у цьому випадку рядка) на інший (тут ціле число).</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Ми можемо далі покращити нашу програму наступним чином:</p></p></p>
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class=" o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class ="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> 
-<span class="n">y</span> <span class="o">=</span> <span class=" nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class ="s">"Що таке y? "</span><span class="p">))</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
+</pre>
+          </div>
+        </div>
+        <p>Тепер результат правильний. Використання <code class="language-plaintext highlighter-rouge">int(x)</code> називається «приведенням», коли значення тимчасово змінюється з одного типу змінної (у цьому випадку рядка) на інший (тут ціле число).</p>
+      </li>
+      <li data-marker="*">
+        <p>Ми можемо далі покращити нашу програму наступним чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"Що таке y? "</span><span class="p">))</span> 
 
 <span class="nf">друк</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Це показує, що ви можете запускати функції на функціях. Спочатку запускається внутрішня функція, а потім зовнішня. Спочатку виконується функція <code class="language-plaintext highlighter-rouge">input</code>. Потім функція <code class="language-plaintext highlighter-rouge">int</code>.</p> 
-  </li> 
-  <li data-marker="*">Ви можете дізнатися більше в документації Python до < a href="https://docs.python.org/3/library/functions.html?highlight=float#int"><code class="language-plaintext highlighter-rouge">int</code></a>.</li> 
-</ul> 
+</code></pre>
+          </div>
+        </div>
+        <p>Це показує, що ви можете запускати функції на функціях. Спочатку запускається внутрішня функція, а потім зовнішня. Спочатку виконується функція <code class="language-plaintext highlighter-rouge">input</code>. Потім функція <code class="language-plaintext highlighter-rouge">int</code>.</p>
+      </li>
+      <li data-marker="*">Ви можете дізнатися більше в документації Python до &lt; a href="https://docs.python.org/3/library/functions.html?highlight=float#int"&gt;<code class="language-plaintext highlighter-rouge">int</code>.</li>
+    </ul>
+    <h2 id="readability-wins">Читабельність перемагає</h2>
+    <ul>
+      <li data-marker="*">Вибираючи свій підхід до завдання кодування, пам’ятайте, що можна навести розумні аргументи для багатьох підходів до однієї проблеми.</li>
+      <li data-marker="*">Незалежно від того, який підхід ви використовуєте до завдання з програмування, запам’ятайте це ваш код має бути читабельним. Ви повинні використовувати коментарі, щоб дати собі та іншим підказки про те, що робить ваш код. Крім того, ви повинні створити код таким чином, щоб його можна було читати.</li>
+    </ul>
+    <h2 id="float-basics">Основи Float</h2>
+    <ul>
+      <li data-marker="*">Значення з плаваючою комою — це дійсне число з десятковою комою,як-от <code class="language-plaintext highlighter-rouge">0,52</code>.</li>
+      <li data-marker="*">
+        <p>Ви можете змінити свій код для підтримки плаваючих значень наступним чином:&lt; /p&gt;</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span> <span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке y? " </span><span class="p">))</span>
 
-<h2 id="readability-wins">Читабельність перемагає</h2> 
-<ul> 
-  <li data-marker="* ">Вибираючи свій підхід до завдання кодування, пам’ятайте, що можна навести розумні аргументи для багатьох підходів до однієї проблеми.</li> 
-  <li data-marker="*">Незалежно від того, який підхід ви використовуєте до завдання з програмування, запам’ятайте це ваш код має бути читабельним. Ви повинні використовувати коментарі, щоб дати собі та іншим підказки про те, що робить ваш код. Крім того, ви повинні створити код таким чином, щоб його можна було читати.</li> 
-</ul> 
-
-<h2 id="float-basics">Основи Float</h2> 
-<ul> 
-  <li data-marker="*"> Значення з плаваючою комою — це дійсне число з десятковою комою,як-от <code class="language-plaintext highlighter-rouge">0,52</code>.</li> 
-  <li data-marker="*"> 
-    <p>Ви можете змінити свій код для підтримки плаваючих значень наступним чином:< /p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span> <span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> 
-<span class="n ">y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке y? " </span><span class="p">))</span>
-
-<span class="nf">друк</span><span class="p">(</span><span class="n">x</span> <span class="o">+</ span> <span class="n">y</span><span class="p">)</span>  
-</code></pre></ div> </div>
-    <p>Ця зміна дозволяє вашому користувачеві вводити <code class="language-plaintext highlighter-rouge" >1.2</code> і <code class="language-plaintext highlighter-rouge">3.4</code>, щоб представити загальну суму <code class="language-plaintext highlighter-rouge">4.6</code>.</p> 
-  </li> 
-  <li data-marker="* "> 
-    <p>Однак уявімо, що ви хочете округлити підсумок до найближчого цілого числа. Переглянувши документацію Python для <code class="language-plaintext highlighter-rouge">round</code>, ви побачите, що доступними аргументами є <code class="language-plaintext highlighter-rouge">round(number[ n, nцифр])</code>. Ці квадратні дужки вказують на те, що програміст може вказати щось необов’язкове. Тому ви можете виконати <code class="language-plaintext highlighter-rouge">round(n)</code>, щоб округлити цифру до найближчого цілого числа. Крім того, ви можете закодувати наступним чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача 
-< /span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> < 
-span class="n"> y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf" ">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">x</span> <span class="o">+&lt;/ span&gt; <span class="n">y</span><span class="p">)</span>  
+</span></code></pre>&lt;/ div&gt;
+          </div>
+          <p>Ця зміна дозволяє вашому користувачеві вводити <code class="language-plaintext highlighter-rouge">1.2</code> і <code class="language-plaintext highlighter-rouge">3.4</code>, щоб представити загальну суму <code class="language-plaintext highlighter-rouge">4.6</code>.</p>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Однак уявімо, що ви хочете округлити підсумок до найближчого цілого числа. Переглянувши документацію Python для <code class="language-plaintext highlighter-rouge">round</code>, ви побачите, що доступними аргументами є <code class="language-plaintext highlighter-rouge">round(number[ n, nцифр])</code>. Ці квадратні дужки вказують на те, що програміст може вказати щось необов’язкове. Тому ви можете виконати <code class="language-plaintext highlighter-rouge">round(n)</code>, щоб округлити цифру до найближчого цілого числа. Крім того, ви можете закодувати наступним чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Отримати дані користувача 
+&lt; /span&gt;<span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> &lt; 
+span class="n"&gt; y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
 
 <span class="c1"># Створити округлений результат 
-</span><span class="n">z</span> < span class="o">=</span> <span class="nf">круглий</span><span class="p">(</span><span class="n">x</span > <span class="o">+</span> <span class="n">y</span><span class="p">)</span> 
+</span><span class="n">z</span> &lt; span class="o"&gt;=</code> <span class="nf">круглий</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> 
 
 <span class="c1"># Роздрукувати результат 
 </span><span class="nf">друк</span><span class="p">(</span><span class="n"> z</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Вихідні дані буде округлено до найближчого цілого числа.</p > 
-  </li> 
-  <li data-marker="*"> 
-    <p>Що, якби ми хотіли відформатувати виведення довгих чисел? Наприклад, замість <code class="language-plaintext highlighter-rouge">1000</code> ви можете побачити <code class="language-plaintext highlighter-rouge">1000</code>. Ви можете змінити свій код таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1 "># Отримати дані користувача</p> <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача</p> <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача</p> 
-</span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class ="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"Що таке x? "< /span><span class="p">))</span> 
+</pre>
+          </div>
+        </div>
+        <p>Вихідні дані буде округлено до найближчого цілого числа.</p>
+      </li>
+      <li data-marker="*">
+        <p>Що, якби ми хотіли відформатувати виведення довгих чисел? Наприклад, замість <code class="language-plaintext highlighter-rouge">1000</code> ви можете побачити <code class="language-plaintext highlighter-rouge">1000</code>. Ви можете змінити свій код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Отримати дані користувача<br><br> </span></code></pre>
+            <div class="language-py highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="c1"><code><span class="c1"># Отримати дані користувача<br><br> </span></code></span></code></pre>
+                <div class="language-py highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code><span class="c1"><code><span class="c1"># Отримати дані користувача<br><br> 
+</span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span><span class="p">(</span><span class="s">"Що таке x? "&lt; /span&gt;<span class="p">))</span> 
 <span class="n">y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span> <span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span>
 
 <span class="c1"># Створіть округлений результат 
-</span><span class="n">z</span> <span class="o">=</span> <span class="nf" >круглий</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class=" n">y</span><span class="p">)</span> 
+</span><span class="n">z</span> <span class="o">=</span> <span class="nf">круглий</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> 
 
 <span class="c1"># Надрукувати відформатований результат 
-</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s" >"</span><span class="si">{</span><span class="n">z</span><span class="si">:</span><span class=" p">,</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Хоча цей <code class="language-plaintext highlighter-rouge">print(f"{z:,}")</ code> створює сценарій, у якому виведений <code class="language-plaintext highlighter-rouge">z</code> включатиме коми, де результат може виглядати як <code class="language-plaintext" highlighter-rouge">1000</code> або <code class="language-plaintext highlighter-rouge">2500</code>.</p> 
-  </li> 
-</ul> 
-
-<h2 id="more-on -floats">Докладніше про плаваючу кому</h2> 
-<ul> 
-  <li data-marker="*"> 
-    <p>Як округлити значення з плаваючою комою? Спочатку змініть свій код наступним чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача 
-< /span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> < 
-span class="n"> y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf" ">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">z</span><span class="si">:</span><span class="p">,</span><span class="si">}</span><span class="s">"</span><span class="p">)</span> 
+</span></code></span></code></pre>
+                  </div>
+                </div>
+                <pre> 
+    <br>Хоча цей <code class="language-plaintext highlighter-rouge">print(f"{z:,}")&lt;/ code&gt; створює сценарій, у якому виведений <code class="language-plaintext highlighter-rouge">z</code> включатиме коми, де результат може виглядати як <code class="language-plaintext">1000</code> або <code class="language-plaintext highlighter-rouge">2500</code>.<br><br> 
+  </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h2 id="more-on -floats">Докладніше про плаваючу кому</h2>
+    <ul>
+      <li data-marker="*">
+        <p>Як округлити значення з плаваючою комою? Спочатку змініть свій код наступним чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Отримати дані користувача 
+&lt; /span&gt;<span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> &lt; 
+span class="n"&gt; y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
 
 <span class="c1"># Обчислити результат 
 </span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> 
 
 <span class="c1"># Роздрукувати результат 
 </span><span class="nf">друк</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
-</code></pre></div> < /div> 
-    <p>При введенні <code class="language-plaintext highlighter-rouge">2</code> як x і <code class="language-plaintext highlighter-rouge">3</code> як y, результат z — <код class="language-plaintext highlighter-rouge">0,6666666666</code>, здавалося б, продовжується до нескінченності, як ми могли очікувати.</p> 
-  </li>  
-  <li data-marker="*"> <li data-marker="*"> <li data-marker="*">
-    <p>Уявімо, що ми хочемо округлити це вниз, ми можемо змінити наш код виглядає так:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача</p> <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача</p> <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача
-</span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p" >(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span>< span class="p">))</span> 
+</code></pre>
+          </div>&lt; /div&gt;
+          <p>При введенні <code class="language-plaintext highlighter-rouge">2</code> як x і <code class="language-plaintext highlighter-rouge">3</code> як y, результат z — &lt;�код class="language-plaintext highlighter-rouge"&gt;0,6666666666, здавалося б, продовжується до нескінченності, як ми могли очікувати.</p>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Уявімо, що ми хочемо округлити це вниз, ми можемо змінити наш код виглядає так:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Отримати дані користувача<br><br> </span></code></pre>
+            <div class="language-py highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="c1"><code><span class="c1"># Отримати дані користувача<br><br> </span></code></span></code></pre>
+                <div class="language-py highlighter-rouge">
+                  <div class="highlight">
+                    <pre class="highlight"><code><span class="c1"><code><span class="c1"># Отримати дані користувача
+</span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span>&lt; span class="p"&gt;))</code> 
 <span class="n">y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">input</span> <span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
 
-<span class="c1 "># Обчислити результат і округлити 
-</span><span class="n">z</span> <span class="o">=</span> <span class="nf">круглий</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2</ span><span class="p">)</span> 
+<span class="c1"># Обчислити результат і округлити 
+</span><span class="n">z</span> <span class="o">=</span> <span class="nf">круглий</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">,</span> <span class="mi">2&lt;/ span&gt;<span class="p">)</span> 
 
 <span class="c1"># Роздрукувати результат 
 </span><span class="nf">друк</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Як ми могли очікувати, це округлить результат до найближчих двох знаків після коми.</p> 
-  </li> 
-  <li data-marker= "*"> 
-    <p>Ми також можемо використати <code class="language-plaintext highlighter-rouge">fstring</code>, щоб відформатувати вивід таким чином:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Отримати дані користувача 
-< /span><span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> < 
-span class="n"> y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf" ">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
+</span></span></code></pre>
+                  </div>
+                </div>
+                <pre> 
+    <br>Як ми могли очікувати, це округлить результат до найближчих двох знаків після коми. 
+  </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li data-marker="*">
+        <p>Ми також можемо використати <code class="language-plaintext highlighter-rouge">fstring</code>, щоб відформатувати вивід таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Отримати дані користувача 
+&lt; /span&gt;<span class="n">x</span> <span class="o">=</span> <span class="nf">float</span><span class="p"> (</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> &lt; 
+span class="n"&gt; y</span> <span class="o">=</span> <span class="nf">float</span><span class="p">(</span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що y? "</span><span class="p">))</span> 
 
 <span class="c1"># Обчислити результат 
 </span><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> 
 
 <span class="c1"># Роздрукувати результат 
-</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span> <span class="n">z</span><span class="si">:</span><span class="p">.</span><span class="mi">2</ span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">) </span> 
-</code></pre></div> </div> 
-    <p>Цей загадковий код <code class="language-plaintext highlighter-rouge">fstring</code> відображає те саме, що й наша попередня стратегія округлення.< /p> 
-  </li>  
-  <li data-marker="*"> <li data-marker="*"> <li data-marker="*">
-    <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class="language-plaintext highlighter-rouge">float</code></a> .</p> 
-  </li></p> </li></p> </li></span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s" >"</span><span class="p">)</span> </code></pre></div> </div> <p>Цей загадковий <code class="language-plaintext highlighter- rouge">fstring</code> код відображає те саме, що й наша попередня стратегія округлення.</p> </li> <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class=" language-plaintext highlighter-rouge">float</code></a>.</p> </li></span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s" >"</span><span class="p">)</span> </code></pre></div> </div> <p>Цей загадковий <code class="language-plaintext highlighter- rouge">fstring</code> код відображає те саме, що й наша попередня стратегія округлення.</p> </li> <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class=" language-plaintext highlighter-rouge">float</code></a>.</p> </li>
-</ul> 
-
-<h2 id="def">Def</h2> 
-<ul> 
-  <li data-marker="*">Чи не було б добре створити наші власні функції?</li> 
-  <li data- marker="*"> 
-    <p>Давайте повернемо наш остаточний код <code class="language-plaintext highlighter-rouge">hello.py</code>, ввівши <code class="language-plaintext highlighter-rouge">код hello.py</code> у вікно терміналу. Ваш вихідний код має виглядати так:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1 "># Запитайте користувача про його ім’я, видаліть пробіли з рядка та зробіть велику першу літеру кожного слова 
-</span><span class="n">name</span> <span class="o">=< /span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> ).</span><span class="nf">strip</span><span class="p">().</span><span class="nf">title</span><span class ="p">()</span> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span> <span class="n">z</span><span class="si">:</span><span class="p">.</span><span class="mi">2&lt;/ span&gt;<span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">) </span> 
+</span></code></pre>
+          </div>
+        </div>
+        <p>Цей загадковий код <code class="language-plaintext highlighter-rouge">fstring</code> відображає те саме, що й наша попередня стратегія округлення.&lt; /p&gt;</p>
+      </li>
+      <li data-marker="*">
+        <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class="language-plaintext highlighter-rouge">float</code></a> .</p>
+      </li><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+      <p>Цей загадковий <code class="language-plaintext highlighter- rouge">fstring</code> код відображає те саме, що й наша попередня стратегія округлення.</p>
+      <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class="language-plaintext highlighter-rouge">float</code></a>.</p><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+      <p>Цей загадковий <code class="language-plaintext highlighter- rouge">fstring</code> код відображає те саме, що й наша попередня стратегія округлення.</p>
+      <p>Ви можете дізнатися більше в документації Python щодо <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code class="language-plaintext highlighter-rouge">float</code></a>.</p>
+    </ul>
+    <h2 id="def">Def</h2>
+    <ul>
+      <li data-marker="*">Чи не було б добре створити наші власні функції?</li>
+      <li data-="" marker="*">
+        <p>Давайте повернемо наш остаточний код <code class="language-plaintext highlighter-rouge">hello.py</code>, ввівши <code class="language-plaintext highlighter-rouge">код hello.py</code> у вікно терміналу. Ваш вихідний код має виглядати так:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Запитайте користувача про його ім’я, видаліть пробіли з рядка та зробіть велику першу літеру кожного слова 
+</span><span class="n">name</span> <span class="o">=&lt; /span&gt; <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> ).</span><span class="nf">strip</span><span class="p">().</span><span class="nf">title</span><span class="p">()</span> 
 
 <span class="c1"># Надрукувати результат 
-</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, </ span><span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">" </span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Ми можемо покращити наш код, щоб створіть нашу власну спеціальну функцію, яка скаже нам «привіт»!</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Видаливши весь наш код у нашому текстовому редакторі, почнемо з нуля:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ім'я</span> < span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звати ? "</span><span class="p">)</span> 
+</span><span class="nf">друк</span><span class="p">(</span><span class="sa">f</span><span class="s">"привіт, &lt;/ span&gt;<span class="si">{</span><span class="n">ім'я</span><span class="si">}</span><span class="s">" </span><span class="p">)</span> 
+</span></span></code></pre>
+          </div>
+        </div>
+        <p>Ми можемо покращити наш код, щоб створіть нашу власну спеціальну функцію, яка скаже нам «привіт»!</p>
+      </li>
+      <li data-marker="*">
+        <p>Видаливши весь наш код у нашому текстовому редакторі, почнемо з нуля:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="n">ім'я</span> &lt; span class="o"&gt;=</code> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звати ? "</span><span class="p">)</span> 
 <span class="nf">привіт</span><span class="p">()</span> 
-<span class="nf">друк</span><span class="p">(</span ><span class="n">name</span><span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Спроба запустити це коду, ваш компілятор видасть помилку. Зрештою, немає визначеної функції для <code class="language-plaintext highlighter-rouge">привіт</code>.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Ми може створити нашу власну функцію під назвою <code class="language-plaintext highlighter-rouge">hello</code> наступним чином:</p> 
- 
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">привіт</span><span class="p" >():</span>
-    <span class="nf">друк</span><span class="p ">(</span><span class="s">"привіт"</span><span class="p">)</span> 
+<span class="nf">друк</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> 
+</pre>
+          </div>
+        </div>
+        <p>Спроба запустити це коду, ваш компілятор видасть помилку. Зрештою, немає визначеної функції для <code class="language-plaintext highlighter-rouge">привіт</code>.</p>
+      </li>
+      <li data-marker="*">
+        <p>Ми може створити нашу власну функцію під назвою <code class="language-plaintext highlighter-rouge">hello</code> наступним чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">def</span> <span class="nf">привіт</span><span class="p">():</span>
+    <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт"</span><span class="p">)</span> 
 
 
-<span class="n">ім'я</span> <span class="o">=</ span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class= "p">)</span> 
-<span class="nf">привіт</span><span class="p">()</span></p> <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт"</span><span class=" p">)</span> <span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span клас ="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> <span class="nf">привіт</span><span class="p">()</span></p> <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт"</span><span class=" p">)</span> <span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span клас ="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> <span class="nf">привіт</span><span class="p">()</span>
-<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)</ span> 
-</code></pre></div> </div> 
-    <p>Зверніть увагу, що все під <code class="language-plaintext highlighter-rouge">def hello()</code> має відступ. Python є мовою з відступами. Він використовує відступи, щоб зрозуміти, що є частиною наведеної вище функції. Тому все у функції <code class="language-plaintext highlighter-rouge">hello</code> має мати відступ. Коли щось не має відступу, це розглядається так, ніби воно не знаходиться всередині функції <code class="language-plaintext highlighter-rouge">hello</code>. Запустивши <code class="language-plaintext highlighter-rouge">python hello.py</code> у вікні терміналу, ви побачите, що ваш результат не зовсім такий, як ви хотіли б.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Ми можемо додатково вдосконалити наш код:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
+<span class="n">ім'я</span> <span class="o">=&lt;/ span&gt; <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
+<span class="nf">привіт</span><span class="p">()</span><br><br> <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт"</span><span class="p">)</span> <span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span>(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> <span class="nf">привіт</span><span class="p">()</span><br><br> <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт"</span><span class="p">)</span> <span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span>(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> <span class="nf">привіт</span><span class="p">()</span>
+<span class="nf">друк</span><span class="p">(</span><span class="n">ім'я</span><span class="p">)&lt;/ span&gt; 
+</span></span></code></pre>
+          </div>
+        </div>
+        <p><span class="p">Зверніть увагу, що все під <code class="language-plaintext highlighter-rouge">def hello()</code> має відступ. Python є мовою з відступами. Він використовує відступи, щоб зрозуміти, що є частиною наведеної вище функції. Тому все у функції <code class="language-plaintext highlighter-rouge">hello</code> має мати відступ. Коли щось не має відступу, це розглядається так, ніби воно не знаходиться всередині функції <code class="language-plaintext highlighter-rouge">hello</code>. Запустивши <code class="language-plaintext highlighter-rouge">python hello.py</code> у вікні терміналу, ви побачите, що ваш результат не зовсім такий, як ви хотіли б.</span></p>
+      </li>
+      <li data-marker="*">
+        <p><span class="p">Ми можемо додатково вдосконалити наш код:</span></p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><span class="p"><code> 
 <span class="c1"># Створіть нашу власну функцію 
-</span><span class="k">def</span> <span class="nf">привіт</ span><span class="p">(</span><span class="n">до</span><span class="p">):</span> 
+</span><span class="k">def</span> <span class="nf">привіт&lt;/ span&gt;<span class="p">(</span><span class="n">до</span><span class="p">):</span> 
     <span class="nf"> друку</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n">до</span><span class="p">)</span> 
 
 
 <span class="c1"># Вивід за допомогою нашого власного функція 
-</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p ">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
+</span><span class="n">ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
 <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span> <span class="p">)</span> 
-</code></pre></div> </div> 
-    <p>Тут, у перших рядках, ви створюєте свій <code class="language- функція plaintext highlighter-rouge">hello</code>. Однак цього разу ви повідомляєте компілятору, що ця функція приймає один параметр:змінна під назвою <code class="language-plaintext highlighter-rouge">to</code>. Таким чином, коли ви викликаєте <code class="language-plaintext highlighter-rouge">hello(name)</code>, комп’ютер передає <code class="language-plaintext highlighter-rouge">name</code> в < code class="language-plaintext highlighter-rouge">hello</code> функціонує як <code class="language-plaintext highlighter-rouge">to</code>. Ось як ми передаємо значення у функції. Дуже корисно! Запустивши <code class="language-plaintext highlighter-rouge">python hello.py</code> у вікні терміналу, ви побачите, що результат набагато ближчий до нашого ідеалу, представленого раніше в цій лекції.</p> 
-  </li> 
-  <li data-marker="*">
-    <p>Ми можемо змінити наш код, щоб додати значення за умовчанням до <code class="language-plaintext highlighter-rouge">hello</code>:</p> 
-
-    <div class="language-py highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="c1"># Створіть нашу власну функцію 
-</span><span class="k">def</span> < проліт class="nf">привіт</span><span class="p">(</span><span class="n">to</span><span class="o">=</span> <span class="s">"world"</span><span class="p">):</span> 
+</span></code></span></pre>
+          </div>
+        </div>
+        <p>Тут, у перших рядках, ви створюєте свій <code class="language- функція plaintext highlighter-rouge">hello</code>. Однак цього разу ви повідомляєте компілятору, що ця функція приймає один параметр:змінна під назвою <code class="language-plaintext highlighter-rouge">to</code>. Таким чином, коли ви викликаєте <code class="language-plaintext highlighter-rouge">hello(name)</code>, комп’ютер передає <code class="language-plaintext highlighter-rouge">name</code> в &lt; code class="language-plaintext highlighter-rouge"&gt;hello функціонує як <code class="language-plaintext highlighter-rouge">to</code>. Ось як ми передаємо значення у функції. Дуже корисно! Запустивши <code class="language-plaintext highlighter-rouge">python hello.py</code> у вікні терміналу, ви побачите, що результат набагато ближчий до нашого ідеалу, представленого раніше в цій лекції.</p>
+      </li>
+      <li data-marker="*">
+        <p>Ми можемо змінити наш код, щоб додати значення за умовчанням до <code class="language-plaintext highlighter-rouge">hello</code>:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="c1"># Створіть нашу власну функцію 
+</span><span class="k">def</span> &lt; проліт class="nf"&gt;привіт</code><span class="p">(</span><span class="n">to</span><span class="o">=</span> <span class="s">"world"</span><span class="p">):</span> 
     <span class="nf">друк</span><span class="p"> (</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n">до</span><span class="p">)</span> 
 
 
 <span class="c1"># Вивід за допомогою нашої власної функції 
-</span><span class="n"> ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s ">"Як тебе звати? "</span><span class="p">)</span> 
+</span><span class="n"> ім'я</span> <span class="o">=</span> <span class="nf">вхід</span><span class="p">(</span><span class="s">"Як тебе звати? "</span><span class="p">)</span> 
 <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> 
 
 <span class="c1"># Вивід без передачі очікуваних аргументів 
 </span><span class="nf">hello</span><span class="p">()</span> 
-</code> </pre></div> </div> 
-    <p>Перевірте свій код самостійно. Зверніть увагу, як перше <code class="language-plaintext highlighter-rouge">hello</code> поводитиметься, як ви могли очікувати, а друге hello, якому не передано значення, за умовчанням виведе <code class="language" -plaintext highlighter-rouge">привіт, світе</code>.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Нам не обов’язково мати функцію на початку нашого програма. Ми можемо перемістити його вниз, але нам потрібно повідомити компілятору, що у нас є функція <code class="language-plaintext highlighter-rouge">main</code> і окремий <code class="language-plaintext highlighter -rouge">hello</code> функція.</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> < span class="nf">main</span><span class="p">():</span> 
+ </pre>
+          </div>
+        </div>
+        <p>Перевірте свій код самостійно. Зверніть увагу, як перше <code class="language-plaintext highlighter-rouge">hello</code> поводитиметься, як ви могли очікувати, а друге hello, якому не передано значення, за умовчанням виведе <code class="language">привіт, світе</code>.</p>
+      </li>
+      <li data-marker="*">
+        <p>Нам не обов’язково мати функцію на початку нашого програма. Ми можемо перемістити його вниз, але нам потрібно повідомити компілятору, що у нас є функція <code class="language-plaintext highlighter-rouge">main</code> і окремий <code class="language-plaintext highlighter -rouge">hello</code> функція.</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">def</span> &lt; span class="nf"&gt;main</code><span class="p">():</span> 
 
     <span class="c1"># Вивід за допомогою нашої власної функції 
-</span> <span class=" n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p ">)</span> 
-    <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class= "p">)</span> 
+</span> <span class="n">ім'я</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p">)</span> 
+    <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> 
 
     <span class="c1"># Вивід без передачі очікуваних аргументів 
 </span> <span class="nf">привіт</span><span class="p">()</span> 
 
 
 <span class="c1"># Створіть нашу власну функцію 
-</span><span class="k"> def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">кому</span><span class="o ">=</span><span class="s">"світ"</span><span class="p">):</span></span> <span class="c1"># Вивід за допомогою нашої власної функції </span> <span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Вивід без передачі очікувані аргументи </span> <span class="nf">привіт</span><span class="p">()</span> <span class="c1"># Створити нашу власну функцію </span> <span class="k">def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">до</span><span class="o">=</span><span class="s">"світ"</ span><span class="p">):</span></span> <span class="c1"># Вивід за допомогою нашої власної функції </span> <span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Вивід без передачі очікувані аргументи </span> <span class="nf">привіт</span><span class="p">()</span> <span class="c1"># Створити нашу власну функцію </span> <span class="k">def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">до</span><span class="o">=</span><span class="s">"світ"</ span><span class="p">):</span>
+</span><span class="k"> def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">кому</span><span class="o">=</span><span class="s">"світ"</span><span class="p">):</span> <span class="c1"># Вивід за допомогою нашої власної функції </span> <span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Вивід без передачі очікувані аргументи </span> <span class="nf">привіт</span><span class="p">()</span> <span class="c1"># Створити нашу власну функцію </span> <span class="k">def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">до</span><span class="o">=</span><span class="s">"світ"&lt;/ span&gt;<span class="p">):</span></span> <span class="c1"># Вивід за допомогою нашої власної функції </span> <span class="n">name</span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="c1"># Вивід без передачі очікувані аргументи </span> <span class="nf">привіт</span><span class="p">()</span> <span class="c1"># Створити нашу власну функцію </span> <span class="k">def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">до</span><span class="o">=</span><span class="s">"світ"&lt;/ span&gt;<span class="p">):</span>
     <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p"> ,</span> <span class="n">to</span><span class="p">)</span>  
-</code></pre></div> </div>
-    <p>Однак лише це призведе до певної помилки. Якщо ми запускаємо <code class="language-plaintext highlighter-rouge">python hello.py</code> нічого не відбувається! Причина цього полягає в тому, що ніщо в цьому коді насправді не викликає функцію <code class="language-plaintext highlighter-rouge">main</code> і втілює нашу програму в життя.</p> 
-  </li> 
-  <li data-marker="*"> 
-    <p>Наступна дуже невелика модифікація викличе функцію <code class="language-plaintext highlighter-rouge">main</code> і відновить робочий стан нашої програми:</p> 
-
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf" >main</span><span class="p">():</span> 
+</span></pre>
+          </div>
+        </div>
+        <p>Однак лише це призведе до певної помилки. Якщо ми запускаємо <code class="language-plaintext highlighter-rouge">python hello.py</code> нічого не відбувається! Причина цього полягає в тому, що ніщо в цьому коді насправді не викликає функцію <code class="language-plaintext highlighter-rouge">main</code> і втілює нашу програму в життя.</p>
+      </li>
+      <li data-marker="*">
+        <p>Наступна дуже невелика модифікація викличе функцію <code class="language-plaintext highlighter-rouge">main</code> і відновить робочий стан нашої програми:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span> 
 
     <span class="c1"># Вивід за допомогою нашої власної функції 
-</span> <span class="n">name</ span> <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> 
-    <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p) ">)</span> 
+</span> <span class="n">name&lt;/ span&gt; <span class="o">=</span> <span class="nf">введення</span><span class="p">(</span><span class="s">"Як тебе звуть? "</span><span class="p"> )</span> 
+    <span class="nf">привіт</span><span class="p">(</span><span class="n">name</span><span class="p)">)</span> 
 
     <span class="c1"># Вивід без передачі очікуваних аргументів 
 </span> <span class="nf">привіт</span><span class="p">()</span> 
 
 
 <span class="c1"># Створіть нашу власну функцію 
-</span><span class="k"> def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">кому</span><span class="o ">=</span><span class="s">"світ"</span><span class="p">):</span> 
+</span><span class="k"> def</span> <span class="nf">привіт</span><span class="p">(</span><span class="n">кому</span><span class="o">=</span><span class="s">"світ"</span><span class="p">):</span> 
     <span class="nf">друк</span><span class="p">(</span><span class="s">"привіт,"</span><span class="p">,</span> <span class="n">до</span><span class="p">)</span> 
 
 
-<span class="nf">основний</span><span class="p" >()</span> 
-</code></pre></div> </div> 
-  </li> 
-</ul> 
-
-<h2 id="returning-values">Значення, що повертаються</h2> 
-<ul> 
-  <li data-marker="*">Ви можете собі уявити багато сценарії, де ви не просто хочете, щоб функція виконувала дію, але й повертала значення головній функції. Наприклад, замість того, щоб просто друкувати обчислення <code class="language-plaintext highlighter-rouge">x + y</code>, вам може знадобитися функція, яка повертатиме значення цього обчислення назад до іншої частини вашої програми . Таке «повернення» значення ми називаємо <code class="language-plaintext highlighter-rouge">поверненим</code> значенням.</li> 
-  <li data-marker="*">
-    <p>Повернення до нашого коду <code class="language-plaintext highlighter-rouge">calculator.py</code>, ввівши <code class="language-plaintext highlighter-rouge">code calculator.py</code> . Зітріть там увесь код. Переробіть код таким чином:</p>
- 
-    <div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k"> def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(</ span><span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class=" p">))</span> 
+<span class="nf">основний</span><span class="p">()</span> 
+</span></code></pre>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <h2 id="returning-values">Значення, що повертаються</h2>
+    <ul>
+      <li data-marker="*">Ви можете собі уявити багато сценарії, де ви не просто хочете, щоб функція виконувала дію, але й повертала значення головній функції. Наприклад, замість того, щоб просто друкувати обчислення <code class="language-plaintext highlighter-rouge">x + y</code>, вам може знадобитися функція, яка повертатиме значення цього обчислення назад до іншої частини вашої програми . Таке «повернення» значення ми називаємо <code class="language-plaintext highlighter-rouge">поверненим</code> значенням.</li>
+      <li data-marker="*">
+        <p>Повернення до нашого коду <code class="language-plaintext highlighter-rouge">calculator.py</code>, ввівши <code class="language-plaintext highlighter-rouge">code calculator.py</code> . Зітріть там увесь код. Переробіть код таким чином:</p>
+        <div class="language-py highlighter-rouge">
+          <div class="highlight">
+            <pre class="highlight"><code><span class="k"> def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nf">int</span><span class="p">(&lt;/ span&gt;<span class="nf">введення</span><span class="p">(</span><span class="s">"Що таке x? "</span><span class="p">))</span> 
     <span class="nf">друк</span><span class="p">(</span><span class="s">"x у квадраті дорівнює"</span><span class="p">,</span> <span class="nf">квадрат</span><span class="p">( </span><span class="n">x</span><span class="p">))</span> 
 
 
-<span class="k">def</span> <span class="nf" ">квадрат</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
-    <span class="k">повернути</span> <span class="n">n</span> <span class="o">*</span > <span class="n">n</span> 
+<span class="k">def</span> <span class="nf">квадрат</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+    <span class="k">повернути</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n</span> 
 
 
 <span class="nf">основний</span><span class="p">()</span> 
-</code></pre>< /div> </div> 
-    <p>По суті, <code class="language-plaintext" highlighter-rouge">x</code> передається до <code class="language-plaintext highlighter-rouge">квадрату</code>. Потім обчислення <code class="language-plaintext highlighter-rouge">x * x</code> повертається до головної функції.</p> 
-  </li> 
-</ul> 
-
-<h2 id=" summing-up">Підведення підсумків</h2> 
-<p>Завдяки роботі з цією єдиною лекцією ви навчилися здібностям, які використовуватимете незліченну кількість разів у своїх програмах.Ви дізналися про…</p> 
-<ul> 
-  <li data-marker="*">Створення своїх перших програм на Python;</li> 
-  <li data-marker="*">Функції;</li> 
-  < li data-marker="*">Помилки;</li> 
-  <li data-marker="*">Змінні;</li> 
-  <li data-marker="*">Коментарі;</li> 
-  <li data-marker="*">Псевдокод;</li> 
-  <li data-marker="*">Рядки;</li> 
-  <li data-marker="*">Параметри;</li> 
-  <li data- marker="*">Відформатовані рядки;</li> 
-  <li data-marker="*">Цілі числа;</li> 
-  <li data-marker="*">Принципи читабельності;</li> 
-  <li data-marker="*">Floats;</li> 
-  <li data-marker="*">Створення власних функцій; та</li> 
-  <li data-marker="*">Повернені значення.</li> 
-</ul> 
-
-
-                </main>
+</span></code></pre>&lt; /div&gt;
+          </div>
+          <p>По суті, <code class="language-plaintext">x</code> передається до <code class="language-plaintext highlighter-rouge">квадрату</code>. Потім обчислення <code class="language-plaintext highlighter-rouge">x * x</code> повертається до головної функції.</p>
+        </div>
+      </li>
+    </ul>
+    <h2 id="summing-up">Підведення підсумків</h2>
+    <p>Завдяки роботі з цією єдиною лекцією ви навчилися здібностям, які використовуватимете незліченну кількість разів у своїх програмах.Ви дізналися про…</p>
+    <ul>
+      <li data-marker="*">Створення своїх перших програм на Python;</li>
+      <li data-marker="*">Функції;</li>&lt; li data-marker="*"&gt;Помилки;
+      <li data-marker="*">Змінні;</li>
+      <li data-marker="*">Коментарі;</li>
+      <li data-marker="*">Псевдокод;</li>
+      <li data-marker="*">Рядки;</li>
+      <li data-marker="*">Параметри;</li>
+      <li data-="" marker="*">Відформатовані рядки;</li>
+      <li data-marker="*">Цілі числа;</li>
+      <li data-marker="*">Принципи читабельності;</li>
+      <li data-marker="*">Floats;</li>
+      <li data-marker="*">Створення власних функцій; та</li>
+      <li data-marker="*">Повернені значення.</li>
+    </ul>
+  </ul>
+</main>
